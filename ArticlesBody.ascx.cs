@@ -26,7 +26,7 @@ namespace MGM_Transformer
 
         protected void LoadGrid()
         {
-            string sArticles = "SELECT ArticleId, ArticleNo, ArticleName, CONVERT(VARCHAR(10), ArticleDate, 101) AS ArticleDate FROM Articles ORDER BY ArticleNo desc";
+            string sArticles = "SELECT ArticleId, ArticleNo, ArticleName, CONVERT(VARCHAR(10), ArticleDate, 101) AS ArticleDate FROM Articles ORDER BY ArticleNo";
 
             dsArticles.SelectCommand = sArticles;
             gvArticles.DataSource = dsArticles;

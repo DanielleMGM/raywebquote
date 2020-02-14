@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGM-Transformer", "MGM-Transformer.csproj", "{9929B98E-1328-42A4-849A-23D5B588A376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentDashboard", "..\MGMReportsDev\AgentDashboardLibrary\AgentDashboard.csproj", "{0E1A79E5-C980-4582-95C2-0D9F5ECD4B84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{9929B98E-1328-42A4-849A-23D5B588A376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9929B98E-1328-42A4-849A-23D5B588A376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9929B98E-1328-42A4-849A-23D5B588A376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1A79E5-C980-4582-95C2-0D9F5ECD4B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1A79E5-C980-4582-95C2-0D9F5ECD4B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1A79E5-C980-4582-95C2-0D9F5ECD4B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1A79E5-C980-4582-95C2-0D9F5ECD4B84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
