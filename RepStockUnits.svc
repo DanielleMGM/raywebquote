@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MGM_Transformer.RepStockUnits" CodeBehind="RepStockUnits.svc.cs" %>

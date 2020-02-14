@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9929B98E-1328-42A4-849A-23D5B588A376}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MGM_Transformer</RootNamespace>
+    <AssemblyName>MGM-Transformer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <ExcludeFoldersFromDeployment>Scripts\documentjs;Scripts\funcunit;Scripts\jquery</ExcludeFoldersFromDeployment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AgentDashboard">
+      <HintPath>AgentDashboard\AgentDashboard.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DuoWeb">
+      <HintPath>App_Code\DuoWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>..\PDFExample\WordApp\WordApp\bin\Debug\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="InventoryReportLibrary">
+      <HintPath>InventoryReport\InventoryReportLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\Program Files (x86)\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\iTextPdf\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="M1Report">
+      <HintPath>M1Report\M1Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.css" />
+    <Content Include="AdminPendingApprovals.aspx" />
+    <Content Include="AdminReps.aspx" />
+    <Content Include="AdminRepsBody.ascx" />
+    <Content Include="AdminMaintenance.aspx" />
+    <Content Include="AdminMaintenanceBody.ascx" />
+    <Content Include="AgentDashboard.aspx" />
+    <Content Include="Articles.aspx" />
+    <Content Include="ArticlesBody.ascx" />
+    <Content Include="ASPX_Styles.css" />
+    <Content Include="cases\CASE_GPA.jpg" />
+    <Content Include="cases\CASE_GPB+.jpg" />
+    <Content Include="cases\CASE_GPB.jpg" />
+    <Content Include="cases\CASE_GPC+.jpg" />
+    <Content Include="cases\CASE_GPC.jpg" />
+    <Content Include="cases\CASE_GPD.jpg" />
+    <Content Include="cases\CASE_GPE.jpg" />
+    <Content Include="cases\CASE_GPF_NEMA1.jpg" />
+    <Content Include="cases\CASE_GPF_NEMA3R.jpg" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\Site.css" />
+    <Content Include="ErrorPage\Error.aspx" />
+    <Content Include="Followup\Followup.aspx" />
+    <Content Include="GiftCardPromotionPDF.aspx" />
+    <Content Include="images\Bottom Mounted Bracket.png" />
+    <Content Include="images\MGMLOGO.jpg" />
+    <Content Include="images\Side Mounted Bracket.png" />
+    <Content Include="InventoryPDF.aspx" />
+    <Content Include="M1CustSales.aspx" />
+    <Content Include="MaintDown.aspx" />
+    <Content Include="MaintWarning.aspx" />
+    <Content Include="PerformancePDF.aspx" />
+    <Content Include="PhoneRequest.aspx" />
+    <Content Include="QuoteDetailsPDF.aspx" />
+    <Content Include="QuoteStatusPDF.aspx" />
+    <Content Include="ReportsBody.ascx" />
+    <Content Include="Email.aspx" />
+    <Content Include="EmailBody.ascx" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\bullet.png" />
+    <Content Include="images\bullet_small.png" />
+    <Content Include="images\Calculator.png" />
+    <Content Include="images\Energy Star.png" />
+    <Content Include="images\MGMeyeLOGO.jpg" />
+    <Content Include="QuoteBody.ascx" />
+    <Content Include="CustomerBody.ascx" />
+    <Content Include="Customers.aspx" />
+    <Content Include="Footer.ascx" />
+    <Content Include="Home.aspx" />
+    <Content Include="HomeBody.ascx" />
+    <Content Include="Navigation.ascx" />
+    <Content Include="Quote.aspx" />
+    <Content Include="QuoteItemList.aspx" />
+    <Content Include="CustomPrices.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="MasterPages\MGM.Master" />
+    <Content Include="QuoteItemList.htm" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Duo-Web-v1.bundled.js" />
+    <Content Include="Scripts\Duo-Web-v2.min.js" />
+    <Content Include="Scripts\jquery-2.1.3.min.js" />
+    <Content Include="Scripts\Site.js" />
+    <Content Include="StockListPricesPDF.aspx" />
+    <Content Include="StockPrices.aspx" />
+    <Content Include="StockPricesBody.ascx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PriceListPDF.aspx" />
+    <Content Include="AgentStockPricesPDF.aspx" />
+    <Content Include="Submittal.aspx" />
+    <Content Include="SubmittalBody.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPendingApprovals.aspx.cs">
+      <DependentUpon>AdminPendingApprovals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPendingApprovals.aspx.designer.cs">
+      <DependentUpon>AdminPendingApprovals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPendingApprovalsPDF1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminPendingApprovalsPDF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminReps.aspx.cs">
+      <DependentUpon>AdminReps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminReps.aspx.designer.cs">
+      <DependentUpon>AdminReps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRepsBody.ascx.cs">
+      <DependentUpon>AdminRepsBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRepsBody.ascx.designer.cs">
+      <DependentUpon>AdminRepsBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaintenance.aspx.cs">
+      <DependentUpon>AdminMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaintenance.aspx.designer.cs">
+      <DependentUpon>AdminMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaintenanceBody.ascx.cs">
+      <DependentUpon>AdminMaintenanceBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaintenanceBody.ascx.designer.cs">
+      <DependentUpon>AdminMaintenanceBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Agent.cs" />
+    <Compile Include="AgentDashboard.aspx.cs">
+      <DependentUpon>AgentDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentDashboard.aspx.designer.cs">
+      <DependentUpon>AgentDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgentStockPrices.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentStockPrices.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Articles.aspx.cs">
+      <DependentUpon>Articles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Articles.aspx.designer.cs">
+      <DependentUpon>Articles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticlesBody.ascx.cs">
+      <DependentUpon>ArticlesBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticlesBody.ascx.designer.cs">
+      <DependentUpon>ArticlesBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Codes.cs" />
+    <Compile Include="600V Web Quote Activity.cs">
+      <DependentUpon>600V Web Quote Activity.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataLink.cs" />
+    <Compile Include="ErrorLog.cs" />
+    <Compile Include="ErrorPage\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Followup\Followup.aspx.cs">
+      <DependentUpon>Followup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Followup\Followup.aspx.designer.cs">
+      <DependentUpon>Followup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiftCardPromotion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiftCardPromotion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GiftCardPromotionPDF.aspx.cs">
+      <DependentUpon>GiftCardPromotionPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiftCardPromotionPDF.aspx.designer.cs">
+      <DependentUpon>GiftCardPromotionPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryPDF.aspx.cs">
+      <DependentUpon>InventoryPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryPDF.aspx.designer.cs">
+      <DependentUpon>InventoryPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceFilter.cs" />
+    <Compile Include="M1CustSales.aspx.cs">
+      <DependentUpon>M1CustSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="M1CustSales.aspx.designer.cs">
+      <DependentUpon>M1CustSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintDown.aspx.cs">
+      <DependentUpon>MaintDown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintDown.aspx.designer.cs">
+      <DependentUpon>MaintDown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintWarning.aspx.cs">
+      <DependentUpon>MaintWarning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintWarning.aspx.designer.cs">
+      <DependentUpon>MaintWarning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="MessageBoxCore.cs" />
+    <Compile Include="PDFFileProtector.ashx.cs">
+      <DependentUpon>PDFFileProtector.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceSummary.cs">
+      <DependentUpon>PerformanceSummary.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PerformanceDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerformanceDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformancePDF.aspx.cs">
+      <DependentUpon>PerformancePDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformancePDF.aspx.designer.cs">
+      <DependentUpon>PerformancePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneRequest.aspx.cs">
+      <DependentUpon>PhoneRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhoneRequest.aspx.designer.cs">
+      <DependentUpon>PhoneRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuoteDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteDetailsActions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteDetailsActions.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteDetailsPDF.aspx.cs">
+      <DependentUpon>QuoteDetailsPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuoteDetailsPDF.aspx.designer.cs">
+      <DependentUpon>QuoteDetailsPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuoteDrawingFeatures.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteDrawingFeatures.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteDrawings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteDrawings.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteGenNotes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteGenNotes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteNew.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteNotes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteNotes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteOEM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteOEM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteOEMDrawings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteOEMDrawings.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuotePDF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuotePDF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuotePDFDrawings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuotePDFDrawings.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteStatus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteStatus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuoteStatusPDF.aspx.cs">
+      <DependentUpon>QuoteStatusPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuoteStatusPDF.aspx.designer.cs">
+      <DependentUpon>QuoteStatusPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsBody.ascx.cs">
+      <DependentUpon>ReportsBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportsBody.ascx.designer.cs">
+      <DependentUpon>ReportsBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Email.aspx.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Email.aspx.designer.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailBody.ascx.cs">
+      <DependentUpon>EmailBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailBody.ascx.designer.cs">
+      <DependentUpon>EmailBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="QuoteBody.ascx.cs">
+      <DependentUpon>QuoteBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuoteBody.ascx.designer.cs">
+      <DependentUpon>QuoteBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBody.ascx.cs">
+      <DependentUpon>CustomerBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerBody.ascx.designer.cs">
+      <DependentUpon>CustomerBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeBody.ascx.cs">
+      <DependentUpon>HomeBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeBody.ascx.designer.cs">
+      <DependentUpon>HomeBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MGM.Master.cs">
+      <DependentUpon>MGM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MGM.Master.designer.cs">
+      <DependentUpon>MGM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation.ascx.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navigation.ascx.designer.cs">
+      <DependentUpon>Navigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Quote.aspx.cs">
+      <DependentUpon>Quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quote.aspx.designer.cs">
+      <DependentUpon>Quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuoteItemList.aspx.cs">
+      <DependentUpon>QuoteItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuoteItemList.aspx.designer.cs">
+      <DependentUpon>QuoteItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
+    <Compile Include="DataValidation.cs" />
+    <Compile Include="CustomPrices.aspx.cs">
+      <DependentUpon>CustomPrices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomPrices.aspx.designer.cs">
+      <DependentUpon>CustomPrices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotes.cs" />
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResponseHelper.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="StaTaskScheduler.cs" />
+    <Compile Include="StockInventoryItem.cs" />
+    <Compile Include="StockInventoryItemComparer.cs" />
+    <Compile Include="StockListPricesPDF.aspx.cs">
+      <DependentUpon>StockListPricesPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockListPricesPDF.aspx.designer.cs">
+      <DependentUpon>StockListPricesPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockPrices.aspx.cs">
+      <DependentUpon>StockPrices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockPrices.aspx.designer.cs">
+      <DependentUpon>StockPrices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockPricesBody.ascx.cs">
+      <DependentUpon>StockPricesBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockPricesBody.ascx.designer.cs">
+      <DependentUpon>StockPricesBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PriceList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PriceList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PriceListPDF.aspx.cs">
+      <DependentUpon>PriceListPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PriceListPDF.aspx.designer.cs">
+      <DependentUpon>PriceListPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prices.cs" />
+    <Compile Include="RepObject.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AgentStockPricesPDF.aspx.cs">
+      <DependentUpon>AgentStockPricesPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgentStockPricesPDF.aspx.designer.cs">
+      <DependentUpon>AgentStockPricesPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockPriceList.cs">
+      <DependentUpon>StockPriceList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="StockVoltages.cs" />
+    <Compile Include="Submittal.aspx.cs">
+      <DependentUpon>Submittal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Submittal.aspx.designer.cs">
+      <DependentUpon>Submittal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubmittalBody.ascx.cs">
+      <DependentUpon>SubmittalBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmittalBody.ascx.designer.cs">
+      <DependentUpon>SubmittalBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Transformer.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="pdf-template\" />
+    <Folder Include="pdfs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="600V Web Quote Activity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>600V Web Quote Activity.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPendingApprovalsPDF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdminPendingApprovalsPDF1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgentStockPrices.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AgentStockPrices.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiftCardPromotion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GiftCardPromotion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PerformanceSummary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PerformanceDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PriceList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteDetailsActions.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteDetailsActions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteDrawingFeatures.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteDrawingFeatures.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteDrawings.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteDrawings.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteGenNotes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteGenNotes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteNew.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteNotes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteNotes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteOEM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteOEM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteOEMDrawings.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteOEMDrawings.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuotePDF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuotePDF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuotePDFDrawings.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuotePDFDrawings.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuoteStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>QuoteStatus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockPriceList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StockPriceList.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="StockPriceList.resx">
+      <DependentUpon>StockPriceList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CRUFLMA">
+      <Guid>{51409708-0FF3-426B-9FF7-CB66E14360E1}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PDFFileProtector.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

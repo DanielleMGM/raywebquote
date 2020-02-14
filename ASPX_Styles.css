@@ -1,0 +1,309 @@
+﻿body 
+{
+    font-family: Verdana, Tahoma, Arial; 
+    background-color:#fff; 
+    color:#121212; 
+    height:100%;
+    font-size: 10px;
+    margin:0 auto;
+    padding:0;
+    height:100%;
+    width:960px;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+    text-indent: 0.5em;
+    margin-left: -0.5em;
+}
+
+
+/*************************************************
+* This section is for Master page templates.
+*************************************************/
+#container 
+{
+    min-height:100%;
+    height:100%;
+    position:relative;
+}
+#navigation
+{
+    background:#ff0;
+    padding: 10px;
+}
+#body
+{
+    padding:10px;
+    padding-bottom:65px;    /* Height of the footer */
+}
+#footer
+{
+    position:absolute;
+    bottom:0;
+    width:1000px;
+    height:60px;
+    background:#6cf;
+}
+
+/*************************************************
+* This section is for all layout.
+*************************************************/
+
+.col10
+{
+    width:9%;
+    height:20px;
+    float:left;
+    margin:1%;
+}
+.col20
+{
+    width:19%;
+    height:20px;
+    float:left;
+    margin:1%;
+}
+.col25
+{
+    width:24%;
+    height:20px;
+    float:left;
+    margin:1%;
+}
+.col30
+{
+    width:28%;
+    height:20px;
+    float:left;
+    margin:2%;
+}
+.col50
+{
+    width:48%;
+    height:20px;
+    float:left;
+    margin:2%;
+}
+.col100
+{
+    width:100%;
+    float:none;
+}
+.clear
+{
+    clear:both;
+    height:1px;
+}
+
+.centered
+{
+    display:table;
+    margin: 0 auto;
+}
+
+.bodybackground
+{
+    background-color: #336699;      /* Dark Blue */
+}
+.loginboxbackground
+{
+    background-color: White;
+}
+
+
+/***********************************************/
+
+h1, h2, h3 
+{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+h1
+{
+    margin: 0 auto;
+}
+
+table th
+{
+    font-weight: bolder;
+    color:Black;
+}
+
+table td
+{
+    font-size: 12px;
+}
+
+table tr
+{
+    vertical-align: top;
+}
+
+gridview
+{
+    font-size: x-small;
+}
+
+.errorlabel
+{
+    font-weight: bolder;
+    color:Red;
+    font-size: 10px;
+}
+
+.textlabel
+{
+    font-weight: normal;
+    color:Blue;
+    font-size: 12px;
+}
+
+.textlabelemphasis
+{
+    font-weight: bolder;
+    color:Blue;
+    font-size: 16px;
+}
+
+.textlabelhuge
+{
+    font-weight: bolder;
+    color:Blue;
+    font-size: 20px;
+}
+
+.statuslabel
+{
+    font-weight: bolder;
+    color:Red;
+    font-size: 14px;
+}
+
+.small
+{
+    font-size: small;
+}
+.font12
+{
+    font-size: 12px;
+}
+
+table.pdfcell
+{
+    font-size: 1;
+}
+
+/**********************************
+ * NavBar
+ **********************************/
+div#navbar {
+    height: 30px;
+    width: 100%;
+    border-top: solid #000 1px;
+    border-bottom: solid #000 1px;
+    background-color: #336699;
+}
+div#navbar ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #FFF;
+    line-height: 30px;
+    white-space: nowrap;
+}
+div#navbar li {
+    list-style-type: none;
+    display: inline;
+}
+div#navbar li a {
+    text-decoration: none;
+    padding: 7px 10px;
+    color: #FFF;
+}
+div#navbar li a:link {
+    color: #FFF;
+}
+div#navbar li a:visited {
+    color: #CCC;
+}
+div#navbar li a:hover {
+  color: #336699;
+  background-color: #FFF;
+}
+div#navbar li a:active {
+    font-weight: bold;
+    color: #3366FF;
+    background-color: #FFF;
+}
+/* Used by label on NavBar */
+.lnkselected 
+{
+    font-weight: bold;
+    color: #FFFFCC;         /* light yellow */
+    background-color: #336699;
+}
+
+/**********************************
+ * AdminBar
+ **********************************/
+div#adminbar 
+{
+    border-top: solid #000 1px;
+    border-bottom: solid #000 1px;
+    background-color: #336699;
+}
+div#adminbar ul 
+{
+    width:150px;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #FFF;
+    line-height: 30px;
+    white-space: nowrap;
+    text-align: center;
+    list-style-type: none;
+}
+div#adminbar li 
+{
+    padding: 5px;
+    
+}
+div#adminbar li a {
+    text-decoration: none;
+    padding: 7px 10px;
+    color: #FFF;
+}
+div#adminbar li a:link {
+    color: #FFF;
+}
+div#adminbar li a:visited {
+    color: #CCC;
+}
+div#adminbar li a:hover {
+  color: #336699;
+  background-color: #FFF;
+}
+div#adminbar li a:active {
+    font-weight: bold;
+    color: #3366FF;
+    background-color: #FFF;
+}
+
+/************************************************************
+ * Additional values
+ ************************************************************/
+div#timeout {
+    position: fixed;
+    left: 250px;
+    top: 100px;
+    background-color: Yellow;
+    border-style: solid;
+}

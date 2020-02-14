@@ -1,0 +1,14 @@
+ <add key="SaveAgentDashboard" value="0"/>
+
+ <!--Agent Dashboard Settings-->
+    <add key="SavePDFPath" value="C:\MGMQuotation\pdfs\"/>
+    <!--This setting is for locating .rpt file (added to Base Directory)-->
+    <add key="ReportPath" value="AgentDashboard\DistributorDashboard.rpt"/>
+    <!--End Agent Dashboard Settings-->
+
+    <!--M1 Report Settings-->
+    <add key="ReportPathM1" value="M1Report\M1CustSalesPDF.rpt"/>
+    <!--End M1 Report Settings-->
+
+  <!--This setting is for locating .rpt file (added to Base Directory)-->
+    <add key="ReportPathInventory" value="InventoryReport\Inventory.rpt"/>

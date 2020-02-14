@@ -1,0 +1,12 @@
+bin/
+obj/
+Log/
+*.suo
+*.cache
+*.dll
+*.pdb
+*.user
+*.pdf
+
+.gitignore.swp
+MGM-Transformer.Publish.xml
